@@ -1,0 +1,66 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "bin": {
+    "next-static-manifest": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build --entry ./src/index.js --entry ./src/utils.ts && ./add-node-script",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build --entry ./src/index.js --entry ./src/utils.ts && ./add-node-script",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "next": "^9.5.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "next-static-manifest",
+  "author": "Jack Hanford",
+  "module": "dist/next-static-manifest.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/next-static-manifest.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/next-static-manifest.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.6.0",
+    "babel-jest": "^26.5.2",
+    "husky": "^4.3.0",
+    "next": "^9.5.5",
+    "size-limit": "^4.6.0",
+    "tsdx": "^0.14.0",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "yargs": "^16.0.3"
+  }
+}

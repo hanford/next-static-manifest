@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create manifest scans ./out directory and creates manifest decodes manifest 1`] = `
+Array [
+  Object {
+    "dest": "/blog/posts/[id]/[comment].html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/\\(\\[\\^/\\]\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]/[comment]",
+  },
+  Object {
+    "dest": "/blog/posts/[id].html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]",
+  },
+  Object {
+    "dest": "/index.html",
+    "dynamic": false,
+    "regex": /\\^\\\\/index\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/index",
+  },
+  Object {
+    "dest": "index.html",
+    "dynamic": false,
+    "regex": /\\^\\\\/\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/",
+  },
+  Object {
+    "dest": "/[...slug].html",
+    "dynamic": true,
+    "regex": /\\^\\\\/\\(\\.\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/[...slug]",
+  },
+]
+`;
+
+exports[`create manifest scans ./out directory and creates manifest encodes manifest 1`] = `"[{\\"src\\":\\"/blog/posts/[id]/[comment]\\",\\"dest\\":\\"/blog/posts/[id]/[comment].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]\\",\\"dest\\":\\"/blog/posts/[id].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/index\\",\\"dest\\":\\"/index.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/index(?:\\\\\\\\/)?$/\\",\\"dynamic\\":false},{\\"dynamic\\":false,\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(?:\\\\\\\\/)?$/\\",\\"src\\":\\"/\\",\\"dest\\":\\"index.html\\"},{\\"src\\":\\"/[...slug]\\",\\"dest\\":\\"/[...slug].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(.+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true}]"`;
+
+exports[`create manifest scans ./out directory and creates manifest returns manifest 1`] = `
+Array [
+  Object {
+    "dest": "/blog/posts/[id]/[comment].html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/\\(\\[\\^/\\]\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]/[comment]",
+  },
+  Object {
+    "dest": "/blog/posts/[id].html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]",
+  },
+  Object {
+    "dest": "/index.html",
+    "dynamic": false,
+    "regex": /\\^\\\\/index\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/index",
+  },
+  Object {
+    "dest": "index.html",
+    "dynamic": false,
+    "regex": /\\^\\\\/\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/",
+  },
+  Object {
+    "dest": "/[...slug].html",
+    "dynamic": true,
+    "regex": /\\^\\\\/\\(\\.\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/[...slug]",
+  },
+]
+`;
