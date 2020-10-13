@@ -51,7 +51,7 @@ export default function createManifest(outDir: string) {
   if (sorted.some(k => k?.src === '/[...slug]')) {
     sorted.push(
       ...sorted.splice(
-        sorted.findIndex(v => v?.src == '/[...slug]'),
+        sorted.findIndex(v => v?.src === '/[...slug]'),
         1
       )
     );
