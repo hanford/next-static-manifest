@@ -4,7 +4,7 @@
 
 <p align="center">
 Create a static page manifest of your 
-<a href="https://nextjs.org/docs/advanced-features/static-html-export">Next.js exported html pages</a>, allowing you to match incoming requests with a Next.js HTML page.
+<a href="https://nextjs.org/docs/advanced-features/static-html-export">Next.js exported html pages</a>, allowing you to match incoming requests with dynamic Next.js HTML routes.
 </p>
 
 <p align="center">
@@ -58,7 +58,7 @@ And after exporting our app, we get this:
 |   |-- blog/posts/[id]/[authorId].html
 ```
 
-Your `next-static-manifest` will look this:
+The `next-static-manifest.json` will look this:
 
 ```json
 [
@@ -103,13 +103,13 @@ Your `next-static-manifest` will look this:
 
 Without any type of infrastructure in place, we can't route users to our dynamically exported routes.
 
-This request: `/blog/posts/123-456-789` doesn't match our filesystem location for the corresponding `/blog/posts/[id].html` file.
+A request to: `/blog/posts/123-456-789` wont match our filesystem location for the `/blog/posts/[id].html` file.
 
-However, if we write a small [Lambda@Edge](https://aws.amazon.com/lambda/edge/#:~:text=Lambda%40Edge%20is%20a%20feature,improves%20performance%20and%20reduces%20latency.&text=With%20Lambda%40Edge%2C%20you%20can,all%20with%20zero%20server%20administration.) function or use a [Worker](https://workers.cloudflare.com/) to ingest this file, we can automatically route users to the correct .html entrypoint.
+However, if we write a small [Lambda@Edge](https://aws.amazon.com/lambda/edge/#:~:text=Lambda%40Edge%20is%20a%20feature,improves%20performance%20and%20reduces%20latency.&text=With%20Lambda%40Edge%2C%20you%20can,all%20with%20zero%20server%20administration.) function or use a [Worker](https://workers.cloudflare.com/) to ingest this file, we can automatically route users to the correct `.html` entrypoint.
 
 ## How it works
 
-`next-static-manifest` runs after your app has been exported by Next. We generate a `next-static-manifest.json` file that you can poll on Lambda@Edge or in your worker, after deploying, your worker will get a new file and route accordingly.
+`next-static-manifest` runs after your app has been exported by Next. We generate a `next-static-manifest.json` file that you can poll on Lambda@Edge or in your Worker, after deploying, your worker will get a new file and route accordingly.
 
 In your function/worker, it's important to use `decode` when parsing the manifest file.
 
