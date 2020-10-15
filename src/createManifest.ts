@@ -5,7 +5,8 @@ import {
   isDynamicRoute,
 } from 'next/dist/next-server/lib/router/utils';
 
-import { RouteEntry, getAllFiles } from './utils';
+import { RouteEntry } from './utils';
+import { getAllFiles } from './getAllFiles';
 
 const html = '.html';
 
