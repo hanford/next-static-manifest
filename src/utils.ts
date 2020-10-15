@@ -15,7 +15,7 @@ export function decode(object: any) {
   return JSON.parse(object, deserialize);
 }
 
-function deserialize(_k: string, value: string) {
+export function deserialize(_k: string, value: string) {
   if (value.toString().includes(REGEX_KEY)) {
     const m = value.split(REGEX_KEY)[1].match(/\/(.*)\/(.*)?/);
 
