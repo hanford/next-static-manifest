@@ -5,12 +5,12 @@ import { argv } from 'yargs';
 import createManifest from './createManifest';
 import { encode } from './utils';
 
-const distDir = (argv.distDir as string) || 'out';
+const outDir = (argv.outDir as string) || 'out';
 const fileName = (argv.fileName as string) || 'next-static-manifest';
 
-const entryManifest = join(distDir, `${fileName}.json`);
+const entryManifest = join(outDir, `${fileName}.json`);
 
-const routes = createManifest(distDir);
+const routes = createManifest(outDir);
 
 fs.writeFile(entryManifest, encode(routes), function(err) {
   if (err) throw err;

@@ -36,7 +36,7 @@ export default function createManifest(outDir: string) {
       dynamic: false,
       regex: getRouteRegex('/').re,
       src: '/',
-      dest: 'index.html',
+      dest: '/index.html',
     },
   ];
 

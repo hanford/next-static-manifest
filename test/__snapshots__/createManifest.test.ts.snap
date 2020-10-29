@@ -21,7 +21,7 @@ Array [
     "src": "/index",
   },
   Object {
-    "dest": "index.html",
+    "dest": "/index.html",
     "dynamic": false,
     "regex": /\\^\\\\/\\(\\?:\\\\/\\)\\?\\$/,
     "src": "/",
@@ -35,7 +35,7 @@ Array [
 ]
 `;
 
-exports[`create manifest scans ./out directory and creates manifest encodes manifest 1`] = `"[{\\"src\\":\\"/blog/posts/[id]/[comment]\\",\\"dest\\":\\"/blog/posts/[id]/[comment].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]\\",\\"dest\\":\\"/blog/posts/[id].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/index\\",\\"dest\\":\\"/index.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/index(?:\\\\\\\\/)?$/\\",\\"dynamic\\":false},{\\"dynamic\\":false,\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(?:\\\\\\\\/)?$/\\",\\"src\\":\\"/\\",\\"dest\\":\\"index.html\\"},{\\"src\\":\\"/[...slug]\\",\\"dest\\":\\"/[...slug].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(.+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true}]"`;
+exports[`create manifest scans ./out directory and creates manifest encodes manifest 1`] = `"[{\\"src\\":\\"/blog/posts/[id]/[comment]\\",\\"dest\\":\\"/blog/posts/[id]/[comment].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]\\",\\"dest\\":\\"/blog/posts/[id].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/index\\",\\"dest\\":\\"/index.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/index(?:\\\\\\\\/)?$/\\",\\"dynamic\\":false},{\\"dynamic\\":false,\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(?:\\\\\\\\/)?$/\\",\\"src\\":\\"/\\",\\"dest\\":\\"/index.html\\"},{\\"src\\":\\"/[...slug]\\",\\"dest\\":\\"/[...slug].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(.+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true}]"`;
 
 exports[`create manifest scans ./out directory and creates manifest returns manifest 1`] = `
 Array [
@@ -58,7 +58,7 @@ Array [
     "src": "/index",
   },
   Object {
-    "dest": "index.html",
+    "dest": "/index.html",
     "dynamic": false,
     "regex": /\\^\\\\/\\(\\?:\\\\/\\)\\?\\$/,
     "src": "/",
