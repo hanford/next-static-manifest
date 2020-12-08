@@ -40,11 +40,17 @@ export default function createManifest(outDir: string) {
     },
   ];
 
+  // Sort first sorts by whether or not the RouteEntry is dynamic
+  // and additionally sorts by RouteEntry.src.length
   const sorted = routes.sort((a, b) => {
     const first = a as RouteEntry;
     const second = b as RouteEntry;
 
-    return second.src.length - first.src.length;
+    return first.dynamic === second.dynamic
+      ? second.src.length - first.src.length
+      : first.dynamic
+      ? 1
+      : -1;
   });
 
   if (sorted.some(k => k?.src === '/[...slug]')) {

@@ -26,7 +26,7 @@ describe('create manifest scans ./out directory and creates manifest', () => {
     const postUrl = '/blog/posts/420';
 
     expect(decoded.findIndex((v: RouteEntry) => postUrl.match(v.regex))).toBe(
-      1
+      5
     );
   });
 });
