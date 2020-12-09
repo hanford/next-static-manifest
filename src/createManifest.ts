@@ -9,6 +9,7 @@ import { RouteEntry } from './utils';
 import { getAllFiles } from './getAllFiles';
 
 const html = '.html';
+const dynamicRouteRegex = /\/\[[^/]+?\](?=\/|$)/g;
 
 export default function createManifest(outDir: string) {
   const pagesPath = outDir || join(cwd(), 'out');
@@ -46,11 +47,31 @@ export default function createManifest(outDir: string) {
     const first = a as RouteEntry;
     const second = b as RouteEntry;
 
-    return first.dynamic === second.dynamic
-      ? second.src.length - first.src.length
-      : first.dynamic
-      ? 1
-      : -1;
+    // if both routes are dynamic, sort by amount of dynamic segments
+    if (first.dynamic && first.dynamic === second.dynamic) {
+      const firstAmountSegments = (first.src.match(dynamicRouteRegex) || [])
+        .length;
+      const secondAmountSegments = (second.src.match(dynamicRouteRegex) || [])
+        .length;
+
+      // if they don't have the same amount of dynamic segments
+      if (firstAmountSegments !== secondAmountSegments) {
+        return firstAmountSegments > secondAmountSegments ? 1 : -1;
+      }
+    }
+
+    // if both have the same amount of dynamic segments OR aren't dynamic,
+    // sort by length of 'src'
+    if (first.dynamic === second.dynamic) {
+      return second.src.length - first.src.length;
+    }
+
+    // Otherwise, move dynamic down and exact up
+    if (first.dynamic) {
+      return 1;
+    } else {
+      return -1;
+    }
   });
 
   if (sorted.some(k => k?.src === '/[...slug]')) {

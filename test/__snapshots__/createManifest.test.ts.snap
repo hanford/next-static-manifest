@@ -21,6 +21,30 @@ Array [
     "src": "/",
   },
   Object {
+    "dest": "/blog/posts/[id]/delete.html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/delete\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]/delete",
+  },
+  Object {
+    "dest": "/blog/posts/[id]/edit.html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/edit\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]/edit",
+  },
+  Object {
+    "dest": "/blog/posts/[id].html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]",
+  },
+  Object {
+    "dest": "/blog/posts/[id]/[comment]/delete.html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/delete\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]/[comment]/delete",
+  },
+  Object {
     "dest": "/blog/posts/[id]/[comment]/edit.html",
     "dynamic": true,
     "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/edit\\(\\?:\\\\/\\)\\?\\$/,
@@ -33,12 +57,6 @@ Array [
     "src": "/blog/posts/[id]/[comment]",
   },
   Object {
-    "dest": "/blog/posts/[id].html",
-    "dynamic": true,
-    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
-    "src": "/blog/posts/[id]",
-  },
-  Object {
     "dest": "/[...slug].html",
     "dynamic": true,
     "regex": /\\^\\\\/\\(\\.\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
@@ -47,7 +65,7 @@ Array [
 ]
 `;
 
-exports[`create manifest scans ./out directory and creates manifest encodes manifest 1`] = `"[{\\"src\\":\\"/blog/posts/new\\",\\"dest\\":\\"/blog/posts/new.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/new(?:\\\\\\\\/)?$/\\",\\"dynamic\\":false},{\\"src\\":\\"/index\\",\\"dest\\":\\"/index.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/index(?:\\\\\\\\/)?$/\\",\\"dynamic\\":false},{\\"dynamic\\":false,\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(?:\\\\\\\\/)?$/\\",\\"src\\":\\"/\\",\\"dest\\":\\"/index.html\\"},{\\"src\\":\\"/blog/posts/[id]/[comment]/edit\\",\\"dest\\":\\"/blog/posts/[id]/[comment]/edit.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/([^/]+?)\\\\\\\\/edit(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]/[comment]\\",\\"dest\\":\\"/blog/posts/[id]/[comment].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]\\",\\"dest\\":\\"/blog/posts/[id].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/[...slug]\\",\\"dest\\":\\"/[...slug].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(.+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true}]"`;
+exports[`create manifest scans ./out directory and creates manifest encodes manifest 1`] = `"[{\\"src\\":\\"/blog/posts/new\\",\\"dest\\":\\"/blog/posts/new.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/new(?:\\\\\\\\/)?$/\\",\\"dynamic\\":false},{\\"src\\":\\"/index\\",\\"dest\\":\\"/index.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/index(?:\\\\\\\\/)?$/\\",\\"dynamic\\":false},{\\"dynamic\\":false,\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(?:\\\\\\\\/)?$/\\",\\"src\\":\\"/\\",\\"dest\\":\\"/index.html\\"},{\\"src\\":\\"/blog/posts/[id]/delete\\",\\"dest\\":\\"/blog/posts/[id]/delete.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/delete(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]/edit\\",\\"dest\\":\\"/blog/posts/[id]/edit.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/edit(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]\\",\\"dest\\":\\"/blog/posts/[id].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]/[comment]/delete\\",\\"dest\\":\\"/blog/posts/[id]/[comment]/delete.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/([^/]+?)\\\\\\\\/delete(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]/[comment]/edit\\",\\"dest\\":\\"/blog/posts/[id]/[comment]/edit.html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/([^/]+?)\\\\\\\\/edit(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/blog/posts/[id]/[comment]\\",\\"dest\\":\\"/blog/posts/[id]/[comment].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/blog\\\\\\\\/posts\\\\\\\\/([^/]+?)\\\\\\\\/([^/]+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true},{\\"src\\":\\"/[...slug]\\",\\"dest\\":\\"/[...slug].html\\",\\"regex\\":\\"__REGEXP__:/^\\\\\\\\/(.+?)(?:\\\\\\\\/)?$/\\",\\"dynamic\\":true}]"`;
 
 exports[`create manifest scans ./out directory and creates manifest returns manifest 1`] = `
 Array [
@@ -70,6 +88,30 @@ Array [
     "src": "/",
   },
   Object {
+    "dest": "/blog/posts/[id]/delete.html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/delete\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]/delete",
+  },
+  Object {
+    "dest": "/blog/posts/[id]/edit.html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/edit\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]/edit",
+  },
+  Object {
+    "dest": "/blog/posts/[id].html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]",
+  },
+  Object {
+    "dest": "/blog/posts/[id]/[comment]/delete.html",
+    "dynamic": true,
+    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/delete\\(\\?:\\\\/\\)\\?\\$/,
+    "src": "/blog/posts/[id]/[comment]/delete",
+  },
+  Object {
     "dest": "/blog/posts/[id]/[comment]/edit.html",
     "dynamic": true,
     "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/edit\\(\\?:\\\\/\\)\\?\\$/,
@@ -80,12 +122,6 @@ Array [
     "dynamic": true,
     "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\\\/\\(\\[\\^/\\]\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
     "src": "/blog/posts/[id]/[comment]",
-  },
-  Object {
-    "dest": "/blog/posts/[id].html",
-    "dynamic": true,
-    "regex": /\\^\\\\/blog\\\\/posts\\\\/\\(\\[\\^/\\]\\+\\?\\)\\(\\?:\\\\/\\)\\?\\$/,
-    "src": "/blog/posts/[id]",
   },
   Object {
     "dest": "/[...slug].html",
