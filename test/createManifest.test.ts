@@ -29,4 +29,22 @@ describe('create manifest scans ./out directory and creates manifest', () => {
       5
     );
   });
+
+  it('it returns POST edit ', () => {
+    const decoded = createManifest(out);
+    const postUrl = '/blog/posts/420/edit';
+
+    expect(decoded.findIndex((v: RouteEntry) => postUrl.match(v.regex))).toBe(
+      4
+    );
+  });
+
+  it('it returns POST COMMENT ', () => {
+    const decoded = createManifest(out);
+    const postUrl = '/blog/posts/420/123';
+
+    expect(decoded.findIndex((v: RouteEntry) => postUrl.match(v.regex))).toBe(
+      8
+    );
+  });
 });
