@@ -24,7 +24,7 @@
     "analyze": "size-limit --why"
   },
   "peerDependencies": {
-    "next": "^9.5.0"
+    "next": "^9.5.0 || ^10.0.0"
   },
   "husky": {
     "hooks": {
