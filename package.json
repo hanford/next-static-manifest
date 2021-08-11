@@ -64,6 +64,8 @@
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.8",
     "@types/yargs": "^15.0.8",
+    "find-up": "^5.0.0",
+    "path-to-regexp": "^6.2.0",
     "yargs": "^16.0.3"
   }
 }

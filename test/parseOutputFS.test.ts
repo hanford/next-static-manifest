@@ -1,5 +1,5 @@
 import { join } from 'path';
-import createManifest from '../src/createManifest';
+import createManifest from '../src/parseOutputFS';
 import { encode, decode, RouteEntry } from '../src/utils';
 
 const out = join(__dirname, 'out');
