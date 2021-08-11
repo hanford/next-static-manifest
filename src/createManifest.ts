@@ -3,7 +3,7 @@ import { cwd } from 'process';
 import {
   getRouteRegex,
   isDynamicRoute,
-} from 'next/dist/next-server/lib/router/utils';
+} from 'next/dist/shared/lib/router/utils';
 
 import { RouteEntry } from './utils';
 import { getAllFiles } from './getAllFiles';

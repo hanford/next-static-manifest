@@ -54,7 +54,7 @@
     "@size-limit/preset-small-lib": "^4.6.0",
     "babel-jest": "^26.5.2",
     "husky": "^4.3.0",
-    "next": "^9.5.5",
+    "next": "^11.1.0",
     "size-limit": "^4.6.0",
     "tsdx": "https://github.com/agilgur5/tsdx.git#dist-multi",
     "tslib": "^2.0.3",
