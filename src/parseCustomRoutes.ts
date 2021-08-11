@@ -3,7 +3,7 @@ import { CONFIG_FILE } from 'next/constants';
 import loadCustomRoutes, {
   normalizeRouteRegex,
 } from 'next/dist/lib/load-custom-routes';
-import { defaultConfig } from 'next/dist/next-server/server/config-shared';
+import { defaultConfig } from 'next/dist/server/config-shared';
 import { pathToRegexp } from 'path-to-regexp';
 
 // import { RouteEntry } from './utils';

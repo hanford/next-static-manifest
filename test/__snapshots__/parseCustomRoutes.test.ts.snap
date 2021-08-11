@@ -19,23 +19,3 @@ Object {
   "beforeFiles": Array [],
 }
 `;
-
-exports[`reads next.config.js and respects rewrites fn works with async/await 1`] = `
-Object {
-  "afterFiles": Array [
-    Object {
-      "dest": "http://foo.com/playground",
-      "dynamic": true,
-      "regex": "^/playground$",
-      "src": "/playground",
-    },
-    Object {
-      "dest": "http://foo.com/playground/:path*",
-      "dynamic": true,
-      "regex": "^/playground(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?$",
-      "src": "/playground/:path*",
-    },
-  ],
-  "beforeFiles": Array [],
-}
-`;
