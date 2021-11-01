@@ -117,8 +117,8 @@ In your function/worker, it's important to use `decode` when parsing the manifes
 import { decode } from 'next-static-manifest';
 
 fetch('.../next-static-manifest.json')
-  .then(r => r.json())
-  .then(data => decode(data));
+  .then((r) => r.json())
+  .then((data) => decode(data));
 ```
 
 We need to hydrate our data with `decode`, because regex isn't part of the JSON spec, so we have to encode/decode it ourselves.
