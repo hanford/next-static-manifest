@@ -20,7 +20,7 @@ export default function createManifest(dirPath: string) {
       .map((route): RouteEntry | null => {
         const dest = route.replace(pagesPath, '');
 
-        if (!dest.endsWith(html)) return null;
+        if (pagesPath !== 'pages' && !dest.endsWith(html)) return null;
 
         const src = dest.replace(html, '');
         const { re: regex } = getRouteRegex(src);
