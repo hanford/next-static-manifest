@@ -11,8 +11,8 @@ import { getAllFiles } from './getAllFiles';
 const html = '.html';
 const dynamicRouteRegex = /\/\[[^/]+?\](?=\/|$)/g;
 
-export default function createManifest(outDir: string) {
-  const pagesPath = outDir || join(cwd(), 'out');
+export default function createManifest(dirPath: string) {
+  const pagesPath = dirPath || join(cwd(), 'out');
   const pages = getAllFiles(pagesPath);
 
   const routes = [
