@@ -34,7 +34,7 @@ export default function createManifest(dirPath: string) {
 
         return {
           src,
-          dest,
+          dest: dest.replace(tsx, html).replace(js, html),
           regex,
           dynamic: isDynamicRoute(src),
         };
