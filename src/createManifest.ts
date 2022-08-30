@@ -9,6 +9,9 @@ import { RouteEntry } from './utils';
 import { getAllFiles } from './getAllFiles';
 
 const html = '.html';
+const tsx = '.tsx';
+const js = '.js';
+
 const dynamicRouteRegex = /\/\[[^/]+?\](?=\/|$)/g;
 
 export default function createManifest(dirPath: string) {
@@ -22,7 +25,11 @@ export default function createManifest(dirPath: string) {
 
         if (pagesPath !== 'pages' && !dest.endsWith(html)) return null;
 
-        const src = dest.replace(html, '');
+        const src = dest
+          .replace(html, '')
+          .replace(tsx, '')
+          .replace(js, '');
+
         const { re: regex } = getRouteRegex(src);
 
         return {
