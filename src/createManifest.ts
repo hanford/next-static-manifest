@@ -32,8 +32,8 @@ export default function createManifest(dirPath: string) {
           .replace(js, '');
 
         if (src !== '/index') {
-          src.replace(slashIndex, '');
-          dest.replace(slashIndex, '');
+          src = src.replace(slashIndex, '');
+          dest = dest.replace(slashIndex, '');
         }
 
         const { re: regex } = getRouteRegex(src);
