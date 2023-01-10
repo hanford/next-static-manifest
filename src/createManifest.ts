@@ -1,9 +1,7 @@
 import { join } from 'path';
 import { cwd } from 'process';
-import {
-  getRouteRegex,
-  isDynamicRoute,
-} from 'next/dist/shared/lib/router/utils';
+import { getRouteRegex } from 'next/dist/shared/lib/router/utils/route-regex';
+import { isDynamicRoute } from 'next/dist/shared/lib/router/utils/is-dynamic';
 
 import { RouteEntry } from './utils';
 import { getAllFiles } from './getAllFiles';
